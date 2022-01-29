@@ -1,3 +1,7 @@
+from variables import MORSE_CODE as code
+
+test_morse = "-.. . -.-. .- -.. . ...-"
+
 def morse(morse_code):
     """
     The Morse code encodes every character as a sequence of "dots" and "dashes".
@@ -12,7 +16,22 @@ def morse(morse_code):
 
     param = morse_code : A string of morse codes
     return word : Converted value of morse code to string
-    """
-
+    """ 
+    word = []
+    morse_code = morse_code.split(' ') # Breaks codes into array
+    for x in morse_code:
+        word.append(code[x])
     
-    pass
+
+    return word
+
+
+
+test2 = "-.. . -.-. .- -.. . ...-   ..."
+test2 = test2.split('   ')
+test_morse = test_morse.split(' ')
+word = []
+
+for x in test2:
+    word.append(x)
+
