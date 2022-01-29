@@ -18,20 +18,24 @@ def morse(morse_code):
     return word : Converted value of morse code to string
     """ 
     word = []
-    morse_code = morse_code.split(' ') # Breaks codes into array
-    for x in morse_code:
-        word.append(code[x])
+    if morse_code.find('   '):
+        words = morse_code.split('   ')
+        for x in words:
+            x = x.split(' ')
+            initial = ""
+            for y in x:
+                initial += code[y]
+            word.append(initial)
+        word = " ".join(word)
+                
+    else:
+        morse_code = morse_code.split(' ') # Breaks codes into array
+        for x in morse_code:
+            word.append(code[x])
     
 
     return word
 
 
-
-test2 = "-.. . -.-. .- -.. . ...-   ..."
-test2 = test2.split('   ')
-test_morse = test_morse.split(' ')
-word = []
-
-for x in test2:
-    word.append(x)
+print(morse("-.. . -.-. .- -.. . ...- ..."))
 
