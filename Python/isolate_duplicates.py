@@ -17,7 +17,7 @@ def isolate(duplicates):
                 hold += x
         words.append(hold)
         hold = ""
-
+    # Loop to arrange them in patterns
     for x in words:
         if len(x) > 2:
             hold += f"{x[:2]}[{x[2:]}]"
