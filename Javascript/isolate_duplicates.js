@@ -7,6 +7,8 @@ function isolate(test){
     let hold = "";
     let counter = 0;
 
+    
+
     // For loop to get the uniques of the letters
     for (i in test){
         // Loop that goes through all the characters
@@ -28,6 +30,7 @@ function isolate(test){
         hold = "";
     }
 
+    debugger;
     // Loop to seperates them
     for (x in words){
         if (words[x].length > 2){
@@ -43,4 +46,5 @@ function isolate(test){
 
 }
 
-console.log(isolate("aaasssssssddddffgkkkkkuueyyryrhhsgfhjjsnnnnnnjjfmgjghjdjjjjdhyteghsjckjdheyebnfjhhgnjdfyfggbejjwtyjfjcbdgdhdjfjeeebddhdychdjdjmkj"))
+// console.log(isolate("aaasssssssddddffgkkkkkuueyyryrhhsgfhjjsnnnnnnjjfmgjghjdjjjjdhyteghsjckjdheyebnfjhhgnjdfyfggbejjwtyjfjcbdgdhdjfjeeebddhdychdjsdfdsfdsflldkjkjjkcjdskjfjklfazdjmkj"))
+console.log(isolate(test))
