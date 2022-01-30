@@ -55,3 +55,16 @@ const MORSE_CODE = {
     "..--.-": "_",
     "...---...": "SOS",
   };
+
+  test1 = "-.. . -.-. .- -.. . ...- ..."
+  test2 = "-.. . -.-. .- -.. . ...-   ..."
+
+  function morse(code) {
+      code = code.split(' ');
+      word = "";
+      code.forEach(symbol => {
+         word += MORSE_CODE[symbol] 
+      });
+      return word;
+
+  }

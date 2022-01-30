@@ -32,10 +32,10 @@ def morse(morse_code):
         morse_code = morse_code.split(' ') # Breaks codes into array
         for x in morse_code:
             word.append(code[x])
-    
+        word = "".join(word)
 
     return word
 
 
-print(morse("-.. . -.-. .- -.. . ...- ..."))
+print(morse("-.. . -.-. .- -.. . ...-   ..."))
 
