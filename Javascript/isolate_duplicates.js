@@ -1,21 +1,26 @@
 test = "aaaabbcdefffffffg"
 //  ["aa[aa]bbcdeff[fffff]g", 2]
 
-function isolate(){
-    let words = [];
+function isolate(test){
+    let words = []; 
     let initial = [];
     let hold = "";
     let counter = 0;
 
+    // For loop to get the uniques of the letters
     for (i in test){
+        // Loop that goes through all the characters
         if (!initial.includes(test[i])){
                 initial.push(test[i]);
+                // If the letter is not in the initial, it pushes it to the array
         }
     }
 
+    // Loop to push similar characters into a single array
     for (x in initial) {
-        for (char in test) {
-            if (test[char] == initial[x]){
+        // going through characters in initial
+        for (char in test) { // going through each word in our parameter
+            if (test[char] == initial[x]){ // if they characters match, we join them together
                 hold += initial[x];
             }
         }
@@ -23,6 +28,7 @@ function isolate(){
         hold = "";
     }
 
+    // Loop to seperates them
     for (x in words){
         if (words[x].length > 2){
             hold += words[x].slice(0,2).concat('[', words[x].slice(2), ']');
