@@ -8,7 +8,10 @@ def fibonacci(n):
 
 
 def recursiveFibonacci(n):
-    while n > 0:
-        return n + (recursiveFibonacci(n-1))
+    if n > 0:
+        ans = n + recursiveFibonacci(n-1)
+    else:
+        return False
+    return ans
 
 print(recursiveFibonacci(3))

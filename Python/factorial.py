@@ -7,9 +7,11 @@ def normalFac(number):
 
 def recursiveFactorial(number):
     if number > 0:
-        return (number * recursiveFactorial(number - 1))
+        ans =  (number + recursiveFactorial(number - 1))
+        print(ans)
     else:
         return False
+    return ans
 
 
 print(recursiveFactorial(5))
