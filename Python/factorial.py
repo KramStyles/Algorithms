@@ -13,5 +13,12 @@ def recursiveFactorial(number):
         return False
     return ans
 
+def theirRecursive(number):
+    if number <= 0:
+        return 1
+    else:
+        return number * theirRecursive(number - 1)
+
 
 print(recursiveFactorial(5))
+print(theirRecursive(5))
