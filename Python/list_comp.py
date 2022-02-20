@@ -7,7 +7,8 @@ Lastly the price of item that is <= #50, VAT should be exempted i.e
  VAT should not be charged on that item.
 Solve this problem using list comprehensions."""
 
-prices = [12, 34, 5545, 223, 2233, 221, 484, 84884, 829]
+# prices = [120, 34, 5545, 223, 2233, 221, 484, 4, 829]
+
 
 def shop_with_vat(priceLst):
     emp = []
@@ -19,9 +20,9 @@ def shop_with_vat(priceLst):
     return emp
 
 def shop_with_vat_comp(pricelist):
-    return [item_price if item_price < 50 else round((7.5/100) * item_price + item_price) for item_price in prices]
+    return [item_price if item_price < 50 else round((7.5/100) * item_price + item_price) for item_price in pricelist]
 
+ 
 
-
-print(shop_with_vat(prices))
-print(shop_with_vat_comp(prices))
+# print(shop_with_vat(prices)) 
+print(shop_with_vat_comp([120, 34, 5545, 223, 2233, 221, 484, 4, 829]))
