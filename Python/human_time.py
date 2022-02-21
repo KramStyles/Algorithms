@@ -7,6 +7,9 @@ def human_time(seconds):
 
     if hours < 10:
         hours = f"0{hours}"
+    if secs == 60:
+        secs = "00"
+        mins += 1
     if mins < 10:
         mins = f"0{mins}"
     if secs < 10:
