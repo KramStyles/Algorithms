@@ -10,3 +10,6 @@ def array_packing(integers: list) -> int:
      
     total = [('0'*(8-len(x))) + x for x in numbs]
     return int(''.join(total), 2)
+
+
+print(list(reversed([53, 149, 100])))
