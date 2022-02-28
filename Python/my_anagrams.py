@@ -39,6 +39,10 @@ def anagrams1(word, words):
     counts = Counter(word)
     return [w for w in words if Counter(w) == Counter(word)]
 
-# print(anagrams('abba', ['aabb', 'abcd', 'bbaa', 'dada']))
+def anagrams2(word, words):
+    return [anagram for anagram in words if sorted(anagram) == sorted(word)]
+
+print(anagrams2('abba', ['aabb', 'abcd', 'bbaa', 'dada']))
 print(anagrams1('racer', ['crazer', 'carer', 'racar', 'caers', 'racer']))
-# print(anagrams('laser', ['lazing', 'lazy',  'lacer']))
+print(anagrams('laser', ['lazing', 'lazy',  'lacer']))
+
