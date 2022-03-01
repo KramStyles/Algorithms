@@ -7,5 +7,4 @@ def split_integer(num, parts):
         if sum(ans) < num:
           ans.append(x+1)
           ans = ans[1:]
-          print(ans[1:])
     return(ans)
