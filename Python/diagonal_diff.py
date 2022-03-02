@@ -34,28 +34,25 @@ class Matrix:
 
     def calculate_diagonal_diff(self):
         ans = []
-        back = []
         ans2 = []
         for index, mat in enumerate(self.matrix):
             back = (len(self.matrix) - index) - 1
             ans2.append(mat[back])
             ans.append(mat[index])
-        print("Forward = ", ans)
-        print("Backward = ", ans2)
-        return ("The diagnonal difference is ", sum(ans2) - sum(ans) ) 
+        return ("The diagnonal difference is ", abs(sum(ans2) - sum(ans)) ) 
 
 
     def calculate_corner_sum(self):
-        ans = []
-        for index, mat in enumerate(self.matrix):
-            if index == 0:
-                ans.append(mat[0])
-                ans.append(mat[-1])
-            if index == len(self.matrix)-1:
-                ans.append(mat[0])
-                ans.append(mat[-1])
-        print(ans)
-        return sum(ans)
+        ans = self.matrix
+
+        # for index, mat in enumerate(self.matrix):
+        #     if index == 0:
+        #         ans.append(mat[0])
+        #         ans.append(mat[-1])
+        #     if index == len(self.matrix)-1:
+        #         ans.append(mat[0])
+        #         ans.append(mat[-1])
+        return sum([ans[0][0], ans[0][-1], ans[-1][0], ans[-1][-1]])
         
 
 
