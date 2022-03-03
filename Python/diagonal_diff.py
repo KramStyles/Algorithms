@@ -44,21 +44,13 @@ class Matrix:
 
     def calculate_corner_sum(self):
         ans = self.matrix
-
-        # for index, mat in enumerate(self.matrix):
-        #     if index == 0:
-        #         ans.append(mat[0])
-        #         ans.append(mat[-1])
-        #     if index == len(self.matrix)-1:
-        #         ans.append(mat[0])
-        #         ans.append(mat[-1])
         return sum([ans[0][0], ans[0][-1], ans[-1][0], ans[-1][-1]])
         
 
 
 
 matrix = Matrix()
-matrix.initialise_matrix(3)
+matrix.initialise_matrix(5)
 matrix.display_matrix()
 print(matrix.calculate_diagonal_diff())
 print(matrix.calculate_corner_sum())
