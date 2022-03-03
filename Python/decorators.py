@@ -1,11 +1,16 @@
 def upper_dec(function):
     def wrapper():
         func = function()
-        make_upper = func.upper()
-        return make_upper
+        return func.upper()
     return wrapper()
 
-def simple_string():
-    return "i am a python developer"
+def simple_str():
+    return "i am a programmer"
 
-print(upper_dec(simple_string))
+@upper_dec
+def simple_str1():
+    return "i am a programmer1"
+
+
+print(upper_dec(simple_str))
+print(simple_str1)
