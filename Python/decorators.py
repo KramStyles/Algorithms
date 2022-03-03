@@ -24,3 +24,16 @@ def simple_str1():
 
 print(upper_dec(simple_str))
 print(simple_str1)
+
+
+def upper_dec_arg(function):
+    def wrapper(arg1, arg2):
+        func = function(arg1, arg2)
+        return f"{func} {arg1} {arg2}".upper()
+    return wrapper
+
+@upper_dec_arg
+def simple_str(surname, name):
+    return f"my name is"
+
+print(simple_str('michael', 'jamie'))
