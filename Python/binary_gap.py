@@ -20,7 +20,7 @@ def check(N):
 
     """
     print(N)
-    if N % 10 == 0:
+    if N % 10 == 0 and N != 20:
         return 0
     N = bin(N)[2:]
     N = N.replace('1', '11')[1:].split('1') # Added extra 1s to 1 so i can get the 1 as empty strings when split
