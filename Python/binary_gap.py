@@ -23,11 +23,11 @@ def check(N):
     if N % 10 == 0:
         return 0
     N = bin(N)[2:]
-    N = N.split('1')
+    N = N.replace('1', '11')[1:].split('1') # Added extra 1s to 1 so i can get the 1 as empty strings when split
     print(N)
     if N.count('') == 1:
         return 0
-    if N.count('') == 2 and N[-1] == '':
+    if N[0] == '' and N[-1] == '':
         return len(max(N))
     else:
         # Checks if the zero is bounded by 1 and then finds the top bounded zero and returns it
