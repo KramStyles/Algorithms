@@ -34,9 +34,18 @@ def solution(A:list):
     all but one of the values in A occur an even number of times.
 
     """
-    from collections import Counter
-    a = Counter(A)
-    print(a.popitem()[0])
-    print(a)
+    # from collections import Counter
+    # a = Counter(A)
+    # print(a.popitem()[0])
+    # print(a)
+    length = len(A)
+    final = []
+    while length > 1:
+        current = A[0]
+        if A.count(current) > 1:
+            while current in A:
+                A.remove(current)
+        else:
+            final.append(A[0])
 
 solution([9,7,9,7,3,3,2])

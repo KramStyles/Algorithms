@@ -41,9 +41,10 @@ def solution(arr,K):
     A = arr[:]
     for x in A:
         pos = A.index(x) + K
-        if pos >= len(A):
+        while pos >= len(A):
             pos = pos - len(A)
         arr[pos] = x
     return print (arr)
 
 solution([3, 8, 9, 7, 6], 3)
+solution([6], 5)
