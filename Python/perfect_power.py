@@ -16,9 +16,12 @@ def solution(num):
         for i in range(2, num // 2):
             if num % i == 0:
                 check = False
+                break;
     if check:
         print(num, 'is a prime number')
+    else:
+        return None
 
 
 # solution(81)
-solution(97)
+solution(98)
