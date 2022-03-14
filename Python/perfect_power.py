@@ -11,17 +11,42 @@ def solution(num):
 
     """
     # Make sure it's not a prime number
-    check = True
     if num > 1:
-        for i in range(2, num // 2):
-            if num % i == 0:
-                check = False
-                break;
-    if check:
-        print(num, 'is a prime number')
+        # Get numbers that can divide num
+        # numbers = [dig for dig in range(2, num // 2) if num % dig == 0]
+        for dig in range(2, num // 2 + 1):
+            if num % dig == 0:
+                ans = 0
+                counter = 1
+                while ans < num:
+                    ans = dig ** counter
+                    if ans == num:
+                        return [dig, counter]
+                    else:
+                        counter += 1
+            return None
+    # if numbers:
+    #     # Get numbers that can divide num
+    #     length = len(numbers) + 2
+    #     numbers.pop()
+    #     # for x in range(1, length + 1):
+    #     return numbers
     else:
         return None
 
+    #     for i in range(2, int(n**.5) + 1):
+    #     number = n
+    #     times = 0
+    #     while number % i == 0:
+    #         number /= i
+    #         times += 1
+    #         if number == 1:
+    #             return [i, times]
+    # return None
+
+    # if (num)**(0.5) == int((num)**(0.5)):
+
+
 
 # solution(81)
-solution(98)
+print(solution(4))
