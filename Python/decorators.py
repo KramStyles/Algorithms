@@ -36,4 +36,37 @@ def upper_dec_arg(function):
 def simple_str(surname, name):
     return f"my name is"
 
-print(simple_str('michael', 'jamie'))
+
+# print(simple_str('michael', 'jamie'))
+
+#     def enter_exit_info(self, func):
+#         def wrapper(*arg, **kw):
+#             print '-- entering', func.__name__
+#             print '-- ', self.__dict__
+#             res = func(*arg, **kw)
+#             print '-- exiting', func.__name__
+#             print '-- ', self.__dict__
+#             return res
+#         return wrapper
+
+#     def enter_exit_info(func):
+#         def wrapper(self, *arg, **kw):
+#             print '-- entering', func.__name__
+#             print '-- ', self.__dict__
+#             res = func(self, *arg, **kw)
+#             print '-- exiting', func.__name__
+#             print '-- ', self.__dict__
+#             return res
+#         return wrapper
+
+#     def enter_exit_info(func):
+        
+#         def wrapper(self, *arg, **kw):
+#             print '-- entering', func.__name__
+#             print '-- ', self.__dict__
+#             res = func(self, *arg, **kw)
+#             print '-- exiting', func.__name__
+#             print '-- ', self.__dict__
+#             return res
+#         return wrapper
+
