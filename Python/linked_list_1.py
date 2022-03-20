@@ -14,16 +14,19 @@ class LinkedList:
         self.head = node
 
     def insert_at_end(self, data):
-        new_data = Node(data)
-        if not self.head:
-            self.head = new_data
+        if self.head is None:
+            self.head = Node(data, None)
             return  
 
         itr = self.head
         while itr:
             itr = itr.next
-        
-        itr.next = new_data
+        # Todo: Fix error in this line (NoneType has no attribute text)
+        itr.next = Node(data, None)
+
+    def insert_values(self, array):
+        for data in array:
+            self.insert_at_end(data)
 
 
 
@@ -41,12 +44,12 @@ class LinkedList:
 
 if __name__ == "__main__":
     link = LinkedList()
-    link.insert_in_front(12)
-    link.insert_in_front(69)
+    # link.insert_in_front(12)
+    # link.insert_in_front(69)
     link.insert_in_front(48)
 
-    link.insert_at_end(5)
-
+    link.insert_at_end(5) 
+    # link.insert_values([22, 12, 33, 43])
 
     link.print_link
 
