@@ -15,11 +15,16 @@ class HashTable:
         index = self.get_hash(key)
         return print(self.array[index])
 
+    def __delitem__(self, key):
+        self.array[self.get_hash(key)] = None
+
     def __setitem__(self, key, value):
         return self.add(key, value)
 
     def __getitem__(self, key):
         return self.get(key)
+
+    
 
 
 if __name__ == '__main__':
@@ -28,5 +33,8 @@ if __name__ == '__main__':
     hashT.get('January 15th')
 
     hashT['February 14th'] = "I don't care about this day"
+    hashT['February 14th']
+    
+    del hashT['February 14th']
     hashT['February 14th']
 
