@@ -13,6 +13,20 @@ class LinkedList:
         node = Node(data, self.head)
         self.head = node
 
+    def insert_at_end(self, data):
+        new_data = Node(data)
+        if not self.head:
+            self.head = new_data
+            return  
+
+        itr = self.head
+        while itr:
+            itr = itr.next
+        
+        itr.next = new_data
+
+
+
     @property
     def print_link(self):
         if not self.head: return print('My linked list is empty')
@@ -31,5 +45,10 @@ if __name__ == "__main__":
     link.insert_in_front(69)
     link.insert_in_front(48)
 
+    link.insert_at_end(5)
+
 
     link.print_link
+
+    # NeetCode and Code basics
+    # Blind 75 must do Leetcode
