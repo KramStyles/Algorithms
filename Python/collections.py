@@ -1,7 +1,7 @@
-from collections import Counter
+# from collections import Counter
 
 """
-Collections have specialized data structure that covers the shortcomings 
+Collections have specialized data structure that covers the shortcomings
 of python default data structures i.e., tuple, list, sets, dictionary.
 
 namedtuple() - gives names to values just like a dictionary
@@ -17,8 +17,9 @@ userlist
 userstring
 """
 
-
 # names = namedtuple('names', 'first name, last name')
 # me = names._make('Michael', 'Jamie')
 # me2 = names._make('Mark', 'Eke')
 # print(names)
+
+print('hello')
