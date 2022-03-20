@@ -13,12 +13,23 @@ class LinkedList:
         node = Node(data, self.head)
         self.head = node
 
+    @property
     def print_link(self):
         if not self.head: return print('My linked list is empty')
         else: 
             itr = self.head
+            arrow = ' --> '
+            link = ''
             while itr:
+                link += f'{itr.data}{arrow}'
                 itr = itr.next
+            print(link[:-5])
 
 if __name__ == "__main__":
-    pass
+    link = LinkedList()
+    link.insert_in_front(12)
+    link.insert_in_front(69)
+    link.insert_in_front(48)
+
+
+    link.print_link
