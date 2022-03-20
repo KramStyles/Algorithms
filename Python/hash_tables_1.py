@@ -29,3 +29,4 @@ if __name__ == '__main__':
 
     hashT['February 14th'] = "I don't care about this day"
     hashT['February 14th']
+
