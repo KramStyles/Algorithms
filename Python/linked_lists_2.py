@@ -16,6 +16,14 @@ class LinkedPersons:
         if not self.front:
             new_person = Node(person, self.front)
             self.front = new_person
+            return
+
+        current_person = self.front
+        while current_person.next_person:
+            # print(current_person.next_person.front_person)
+            current_person = current_person.next_person
+
+        current_person.next_person = Node(person)
 
     def list_persons(self):
         if not self.front:
@@ -27,10 +35,13 @@ class LinkedPersons:
                 current_person = current_person.next_person
 
 
+
+
 if __name__ == '__main__':
     queue = LinkedPersons()
     queue.list_persons()
     queue.place_person_at_back('Ola')
     queue.place_person_in_front('Jeremiah')
     queue.place_person_in_front('Michelle')
+    queue.place_person_at_back('Donald')
     queue.list_persons()
