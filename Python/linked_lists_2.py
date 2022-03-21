@@ -48,6 +48,13 @@ class LinkedPersons:
         persons.reverse()
         self.place_people_at_back(persons)
 
+    def number_of_people(self):
+        people = 0
+        while self.front:
+            people += 1
+            self.front = self.front.next_person
+        return print('Number of people:', people)
+
 
 if __name__ == '__main__':
     queue = LinkedPersons()
@@ -61,3 +68,4 @@ if __name__ == '__main__':
     queue.list_persons()
     queue.reverse_people()
     queue.list_persons()
+    queue.number_of_people()
