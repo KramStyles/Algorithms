@@ -7,15 +7,17 @@ def solution(columnTitle: str) -> int:
         total = [alpha.index(char) + 1 for char in columnTitle]
         
         total.reverse()
+        # Todo: Error in Logic
         for x in range(len(total)):
             total[x] += (x * 26)
-        return sum(total) - 1
+            print(x, total[x])
+        return total
     else:
         return alpha.index(columnTitle) + 1
     
     
 
-print(solution('AB'))
-print(solution('A'))
-print(solution('Z'))
-print(solution('ZY'))
+# print(solution('AB'))
+print(solution('AZ'))
+print(solution('BA'))
+# print(solution('ZY'))
