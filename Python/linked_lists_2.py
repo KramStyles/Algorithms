@@ -25,16 +25,28 @@ class LinkedPersons:
 
         current_person.next_person = Node(person)
 
+    def place_people_at_back(self, people: list):
+        for person in people:
+            self.place_person_at_back(person)
+
     def list_persons(self):
+        persons = ''
         if not self.front:
-            print('No one is in the queue')
+            return print('No one is in the queue')
         else:
             current_person = self.front
             while current_person:
-                print(current_person.front_person, '--≥')
+                persons += f" {current_person.front_person} --≥"
                 current_person = current_person.next_person
+        return print(persons[:-4])
 
-
+    def reverse_people(self):
+        persons = []
+        while self.front:
+            persons.append(self.front.front_person)
+            self.front = self.front.next_person
+        persons.reverse()
+        self.place_people_at_back(persons)
 
 
 if __name__ == '__main__':
@@ -44,4 +56,8 @@ if __name__ == '__main__':
     queue.place_person_in_front('Jeremiah')
     queue.place_person_in_front('Michelle')
     queue.place_person_at_back('Donald')
+    queue.list_persons()
+    queue.place_people_at_back(['Folu', 'Ebubue', 'Daniel', 'Okro'])
+    queue.list_persons()
+    queue.reverse_people()
     queue.list_persons()
