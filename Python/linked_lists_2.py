@@ -50,9 +50,19 @@ class LinkedPersons:
 
     def reverse_people_without_list(self):
         # Todo: Runs into infinite loop.. Fix issue
-        while self.front:
-            self.place_person_at_back(self.front.front_person)
-            self.front = self.front.next_person
+        # while self.front:
+        #     self.place_person_at_back(self.front.front_person)
+        #     self.front = self.front.next_person
+        prev = None
+        current = self.front
+        next = self.front
+        while current:
+            next = next.next_person
+            current.next_person = prev
+            prev = current
+            current = next
+
+        self.front = prev
 
     def number_of_people(self):
         people = 0
@@ -91,8 +101,8 @@ if __name__ == '__main__':
     queue.place_people_at_back(['Folu', 'Ebubue', 'Daniel', 'Okro'])
 
     queue.list_persons()
-    queue.reverse_people()
-
+    # queue.reverse_people()
+    queue.reverse_people_without_list()
     queue.list_persons()
     print("Number of people in queue:", queue.number_of_people())
 
