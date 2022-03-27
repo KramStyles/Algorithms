@@ -34,9 +34,10 @@ def superReducedStrings(s):
                     s.pop(index)
                     s.pop(index)
                     break;
-        
-        counts = Counter(s).values()
-        max_of_each = max(counts)
+        if s:
+            counts = Counter(s).values()
+            max_of_each = max(counts)
+        else: return 'Empty String'
 
 
     return ''.join(s)
