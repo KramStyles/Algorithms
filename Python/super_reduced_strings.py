@@ -43,4 +43,6 @@ def superReducedStrings(s):
     return ''.join(s)
     
 # superReducedStrings('aaabccddd')
-superReducedStrings('aa')
+# superReducedStrings('aa')
+# superReducedStrings('baab')
+superReducedStrings('acdqglrfkqyuqfjkxyqvnrtysfrzrmzlygfveulqfpdbhlqdqrrqdqlhbdpfqluevfgylzmrzrfsytrnvqyxkjfquyqkfrlacdqj')
