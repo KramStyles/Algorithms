@@ -36,3 +36,19 @@ def reverse_string(word):
     return ans
 
 reverse_string('we will conquer')
+
+class Queue:
+    def __init__(self) -> None:
+        self.buffer = deque()
+
+    def enqueue(self, val):
+        self.buffer.appendleft(val)
+
+    def dequeue(self, val):
+        return self.buffer.pop()
+
+    def is_empty(self):
+        return len(self.buffer) == 0
+
+    def size(self):
+        return len(self.buffer)
