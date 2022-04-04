@@ -19,4 +19,7 @@ def move_zeros(array):
     return array
 
 
+def move_zeros_shor(array):
+    return [x for x in array if x] + [0]*array.count(0)
+
 move_zeros([1, 0, 1, 2, 0, 1, 3])
