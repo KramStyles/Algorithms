@@ -10,9 +10,9 @@ def find_outlier(integers):
 
 def normal_divisors(integer):
     result = []
-    for num in range(2, (integer//2)+1):
-        if not integer%num:
-            result.append(num)
+    for digi in range(2, (integer//2)+1):
+        if not integer%digi:
+            result.append(digi)
 
     return result
 
@@ -23,7 +23,7 @@ def divisors(integer):
     (except for 1 and the number itself). If the number is prime return an empty array.
     """
 
-    result = [num for num in range(2, (integer//2)+1) if not integer%num]
+    result = [digi for digi in range(2, (integer//2)+1) if not integer%digi]
     return result
       
 
