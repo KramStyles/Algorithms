@@ -12,9 +12,13 @@ def solution(arr, target):
             if item == target:
                 start = idx
                 stop = idx
-                while arr[idx+1] == item:
-                    stop += 1
-                    idx += 1
+                if (idx + 1) < len(arr):
+                    while arr[idx+1] == item:
+                        stop += 1
+                        idx += 1
+                        if(idx + 1) >= len(arr): break
                 return [start, stop]
 
 solution([2,4,5,5,5,5,5,7,9,9], 5)
+solution([1], 1)
+solution([2, 2], 2)
