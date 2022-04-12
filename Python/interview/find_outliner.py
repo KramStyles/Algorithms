@@ -10,7 +10,7 @@ def find_outlier(integers):
 
 def normal_divisors(integer):
     result = []
-    for digi in range(2, (integer//2)+1):
+    for digi in range(2, integer):
         if not integer%digi:
             result.append(digi)
 
