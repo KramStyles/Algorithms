@@ -27,16 +27,22 @@ class RomanNumerals:
         'D':	500,
         'M':	1000,
     }
+    romans_values = list(romans.values())
 
     def to_roman(val):
         numbers = []
+        RN = ''
         for idx, num in enumerate(str(val)):
             zeros = '0'* (len(str(val)) - idx-1)
             numbers.append(num+zeros)
 
         print(numbers)
+        
+        for num in numbers:
+            highest = max([high for high in RomanNumerals.romans_values if high <= int(num)])
+            print(highest, int(num) / highest)
 
     def from_roman(roman_num):
         print('hello')
 
-RomanNumerals.to_roman(1990)
+RomanNumerals.to_roman(2469)
