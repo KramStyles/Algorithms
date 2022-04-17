@@ -54,7 +54,7 @@ def superReducedStrings2(s):
         else: return 'Empty String'
     return print(''.join(group))
     
-superReducedStrings2('aaabccddd')
+# superReducedStrings2('aaabccddd')
 # superReducedStrings2('aa')
-superReducedStrings2('baab')
-# superReducedStrings('acdqglrfkqyuqfjkxyqvnrtysfrzrmzlygfveulqfpdbhlqdqrrqdqlhbdpfqluevfgylzmrzrfsytrnvqyxkjfquyqkfrlacdqj')
+# superReducedStrings2('baab')
+superReducedStrings2('acdqglrfkqyuqfjkxyqvnrtysfrzrmzlygfveulqfpdbhlqdqrrqdqlhbdpfqluevfgylzmrzrfsytrnvqyxkjfquyqkfrlacdqj')
