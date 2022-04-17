@@ -40,21 +40,20 @@ def superReducedStrings(s):
     return ''.join(s)
 
 def superReducedStrings2(s):
-    from collections import Counter
-    max_of_each = max(Counter(s).values())
-    while max_of_each > 1:
-        group = []
-        for x in s:
-            if len(group) > 0 and group[-1] == x:
-                group.pop()
-            else:
-                group.append(x)
-        # group = [group.pop() if len(group) > 0 and group[-1] == x else group.append(x) for x in s]
-        if group: max_of_each = max(Counter(group).values())
-        else: return 'Empty String'
+    # from collections import Counter
+    # max_of_each = max(Counter(s).values())
+    # # while max_of_each > 1:
+    group = []
+    # for x in s:
+    #     if len(group) > 0 and group[-1] == x:
+    #         group.pop()
+    #     else:
+    #         group.append(x)
+    groups = [group.pop() if len(group) > 0 and group[-1] == x else group.append(x) for x in s]
+    if not groups: return print('Empty String')
     return print(''.join(group))
     
 # superReducedStrings2('aaabccddd')
 # superReducedStrings2('aa')
-# superReducedStrings2('baab')
+superReducedStrings2('baab')
 superReducedStrings2('acdqglrfkqyuqfjkxyqvnrtysfrzrmzlygfveulqfpdbhlqdqrrqdqlhbdpfqluevfgylzmrzrfsytrnvqyxkjfquyqkfrlacdqj')
