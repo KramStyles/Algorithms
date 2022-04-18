@@ -1,3 +1,6 @@
+import imp
+
+
 def calPoints(ops):
     """
     Add number to list, 
@@ -43,4 +46,24 @@ def checkBrackets(s):
     if not group: return print('Valid')
     return print('Invalid')
 
-checkBrackets('()[]{}{{}}')
+# checkBrackets('()[]{}{{}}')
+
+def c(S):
+    from string import ascii_letters
+    txt = []
+    sym = {}
+    for idx, s in enumerate(S):
+        if s in ascii_letters:
+            # txt.append(s)
+            txt.insert(0,s)
+        else:
+            sym[idx] = s
+
+    # txt.reverse()
+    for s in sym:
+        txt.insert(s, sym[s])
+
+    print(''.join(txt))
+
+
+c('a-bC-dEf=ghIj!!')
