@@ -19,10 +19,14 @@ class LRUCache:
     def __init__(self, maxSize):
         self.maxSize = maxSize or 1
         self.storage = []
+        self.recent = None
 
     def insertKeyValuePair(self, key, value):
-        # Write your code here.
-        pass
+        if len(self.storage) < self.maxSize:
+            self.storage.append((key, value))
+        else:
+            del self.storage[0]
+            self.storage.append((key, value))
 
     def getValueFromKey(self, key):
         # Write your code here.
@@ -31,3 +35,10 @@ class LRUCache:
     def getMostRecentKey(self):
         # Write your code here.
         pass
+
+q = LRUCache(4)
+q.insertKeyValuePair("b", 2)
+q.insertKeyValuePair("a", 1)
+q.insertKeyValuePair("c", 3)
+q.insertKeyValuePair("d", 4)
+q.insertKeyValuePair("i", 9)
