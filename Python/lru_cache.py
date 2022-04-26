@@ -22,23 +22,50 @@ class LRUCache:
         self.recent = None
 
     def insertKeyValuePair(self, key, value):
-        if len(self.storage) < self.maxSize:
+        self.recent = key
+        plain = {}
+        for item in self.storage:
+            plain[item[0]] = item[1]
+        if key in plain:
+            plain[key] = value
+            self.storage = [(item, plain[item]) for item in plain]
+            print(self.storage)
+        elif len(self.storage) < self.maxSize:
             self.storage.append((key, value))
         else:
             del self.storage[0]
             self.storage.append((key, value))
 
     def getValueFromKey(self, key):
-        # Write your code here.
-        pass
+        plain = {}
+        keys = []
+        for item in self.storage:
+            plain[item[0]] = item[1]
+            keys.append(item[0])
+        if key in plain:
+            self.recent = key
+            index = keys.index(key)
+            self.sortQ(index)
+            print(plain[key])
+            return plain[key]
+        return None
+
+    def sortQ(self,index):
+        for num in range(index, self.maxSize - 1):
+            self.storage[num], self.storage[num+1] = self.storage[num+1], self.storage[num]
 
     def getMostRecentKey(self):
-        # Write your code here.
-        pass
+        print(self.storage[-1][0])
+        return(self.recent)
 
 q = LRUCache(4)
-q.insertKeyValuePair("b", 2)
 q.insertKeyValuePair("a", 1)
+q.insertKeyValuePair("b", 2)
 q.insertKeyValuePair("c", 3)
-q.insertKeyValuePair("d", 4)
-q.insertKeyValuePair("i", 9)
+q.insertKeyValuePair('d', 4)
+# q.getMostRecentKey() # c
+q.getValueFromKey('a') # 1
+# q.getValueFromKey('b') # None
+q.insertKeyValuePair('e', 5)
+
+q.getValueFromKey('a')
