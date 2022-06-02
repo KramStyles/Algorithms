@@ -72,5 +72,22 @@ codes = ['code', 'doce', 'ecod', 'framer', 'frame']
 code1 = ['code', 'aaagmnrs', 'anagrams', 'doce'] # anagrams, code
 code2 = ['poke', 'pkoe', 'okpe', 'ekop'] # poke
 # anagram_check(codes)
-anagram_check([])
-anagram_check(code2)
+# anagram_check([])
+# anagram_check(code2)
+
+test1 = [1, 1, 2, 2, 3, 3] # k = 1 , 2
+test2 = [1, 2, 5, 6, 9, 10] # k = 2, 0
+
+def countPairs(numbers, k):
+    numbers = set(numbers)
+    count = 0
+    for num in numbers:
+        if (num + k) in numbers and (num + k) != num and :
+            print(num, num + k)
+            count += 1
+    print(count)
+
+
+# countPairs(test1, 1)
+# countPairs(test2, 2)
+countPairs([1, 2, 3, 4], 0)
