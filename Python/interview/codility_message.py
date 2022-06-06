@@ -103,4 +103,4 @@ def numberOfCarryOperations(num1, num2):
             
     return result
 
-print(numberOfCarryOperations(145, 55))
+print(numberOfCarryOperations(1, 999999))
