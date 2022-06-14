@@ -12,18 +12,29 @@ def duplicate_encode(word):
         "Success"  =>  ")())())"
         "(( @"     =>  "))((" 
     """
-    existing = []
+    
+
     # return ''.join([if item in existing '(' else ')' for item in word])
     # return ''.join('(' if item in existing else existing.append(item) & ')' for item in word)
-    new_word = ''
-    for item in word:
-        if item in existing:
-            new_word += ')'
-        else:
-            existing.append(item)
-            new_word += '('
-    return new_word
+    # existing = []
+    # new_word = ''
+    # for item in word:
+    #     if item in existing:
+    #         new_word += ')'
+    #     else:
+    #         existing.append(item)
+    #         new_word += '('
+    # return new_word
 
+    from collections import Counter
+    
+    words = Counter(word.lower())
+
+    return ''.join(['(' if words[item] == 1 else ')' for item in word.lower()])
+
+print(duplicate_encode('din'))
 print(duplicate_encode('recede'))
+print(duplicate_encode('Success'))
+print(duplicate_encode('(( @'))
 
 
