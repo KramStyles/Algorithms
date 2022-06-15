@@ -13,4 +13,18 @@ def order(sentence):
     "4of Fo1r pe6ople g3ood th5e the2"  -->  "Fo1r the2 g3ood 4of th5e pe6ople"
     ""  -->  ""
     """
-    pass
+    
+    new_sentence = sentence.split(' ')
+    new_word = [None for item in new_sentence]
+
+    rep = []
+
+    count = 0
+    for item in sentence:
+        if item.isdigit():
+            new_word.append()
+            count += 1
+    return sentence
+
+sentence = "is2 Thi1s T4est 3a"
+print(order(sentence))
