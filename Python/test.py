@@ -1,18 +1,19 @@
-# count = 8
-# for x in range(1, count):
-#     count -= 1
-#     space = '-'*count
-#     ha = '#' * x
-#     print(space,ha, ' ', ha, space)
+test1 = [0,2,4,1,6,2]
+test2 = [2, -1, 0, 2]
 
-def palindrome(string):
-  string = [x.lower() for x in string if x != ' ']
-  
-  rev = list(reversed(string))
-  print(string)
-  print(rev)
-  return print(string == rev)
+def fences(jumps):
+      len_fence = len(jumps)-1
+      if len_fence in jumps:
+            return True
+      else:
+            jumps.sort()
+            for num in jumps:
+                  summ = 0
+                  while summ <= len_fence:
+                        ans = len_fence - num
+                        if ans in jumps:
+                              return True
+                        else: summ+=ans
 
-palindrome('hello ')
-palindrome('race car')
-palindrome('Nurses run')
+
+fences(test1)
