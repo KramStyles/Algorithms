@@ -6,6 +6,8 @@ def counts(arr):
     If the input is an empty array or is null, return an empty array.
     """
     res = []
+    if not arr: return res
+    res = [0, 0]
     for num in arr:
         if num > 0:
             res[0] += 1
