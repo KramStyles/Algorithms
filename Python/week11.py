@@ -79,8 +79,10 @@ class LinkedPerson:
                 counter += 1
 
 
-def removeKthNodeFromEnd(head, k):
-    # Write your code here.
+def removeKthNodeFromEnd(node, k):
+    
+    
+
     pass
 
 node = LinkedPerson()

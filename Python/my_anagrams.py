@@ -42,7 +42,52 @@ def anagrams1(word, words):
 def anagrams2(word, words):
     return [anagram for anagram in words if sorted(anagram) == sorted(word)]
 
-print(anagrams2('abba', ['aabb', 'abcd', 'bbaa', 'dada']))
-print(anagrams1('racer', ['crazer', 'carer', 'racar', 'caers', 'racer']))
-print(anagrams('laser', ['lazing', 'lazy',  'lacer']))
+# print(anagrams2('abba', ['aabb', 'abcd', 'bbaa', 'dada']))
+# print(anagrams1('racer', ['crazer', 'carer', 'racar', 'caers', 'racer']))
+# print(anagrams('laser', ['lazing', 'lazy',  'lacer']))
 
+def anagram_check(text):
+    if not text:
+        return []
+
+    lst = [text[0]]
+    first = ''.join(sorted(text.pop(0)))
+    initials = [first]
+    
+    while text:
+        nxt = ''.join(sorted(text[0]))
+        if first == nxt:
+            text.pop(0)
+        elif nxt in initials:
+            text.pop(0)
+        else:
+            lst.append(text.pop(0))
+            first = nxt
+            initials.append(first)
+    lst.sort()
+    return print(lst)
+            
+
+codes = ['code', 'doce', 'ecod', 'framer', 'frame']
+code1 = ['code', 'aaagmnrs', 'anagrams', 'doce'] # anagrams, code
+code2 = ['poke', 'pkoe', 'okpe', 'ekop'] # poke
+# anagram_check(codes)
+# anagram_check([])
+# anagram_check(code2)
+
+test1 = [1, 1, 2, 2, 3, 3] # k = 1 , 2
+test2 = [1, 2, 5, 6, 9, 10] # k = 2, 0
+
+def countPairs(numbers, k):
+    numbers = set(numbers)
+    count = 0
+    for num in numbers:
+        if (num + k) in numbers and (num + k) != num and :
+            print(num, num + k)
+            count += 1
+    print(count)
+
+
+# countPairs(test1, 1)
+# countPairs(test2, 2)
+countPairs([1, 2, 3, 4], 0)
