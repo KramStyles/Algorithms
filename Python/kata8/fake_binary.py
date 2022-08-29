@@ -5,4 +5,4 @@ def fake_bin(x):
 
     Note: input will never be an empty string
     """
-    return "".join([0 if int(dig) < 5 else 1 for dig in x])    
+    return "".join(['0' if int(dig) < 5 else '1' for dig in x])    
