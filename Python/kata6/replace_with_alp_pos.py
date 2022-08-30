@@ -11,6 +11,6 @@ def alphabet_position(text):
 
     If anything in the text isn't a letter, ignore it and don't return it.
     """
-    return ''.join([f"{pos[item.lower()]} " for item in text if item.lower() in pos])
+    return ''.join([f"{pos[item.lower()]} " for item in text if item.lower() in pos]).strip()
 
 print(alphabet_position("The sunset sets at twelve o' clock."))
