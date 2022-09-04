@@ -1,4 +1,4 @@
-def count_smileys(arr):
+def count_smileys(arr:list):
     """
     Given an array (arr) as an argument complete the function countSmileys that should return the total number of smiling faces.
 
@@ -14,3 +14,8 @@ def count_smileys(arr):
 
     return the number of valid smiley faces in array/list
     """
+    SMILES = [')', 'D']
+    EYES = [':', ';']
+
+    smiley = [smile for smile in arr if smile[0] in EYES and smile[-1] in SMILES]
+    return len(smiley)
