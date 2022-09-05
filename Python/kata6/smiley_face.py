@@ -17,5 +17,10 @@ def count_smileys(arr:list):
     SMILES = [')', 'D']
     EYES = [':', ';']
 
-    smiley = [smile for smile in arr if smile[0] in EYES and smile[-1] in SMILES]
-    return len(smiley)
+    partial = [smile for smile in arr if smile[0] in EYES and smile[-1] in SMILES]
+    [partial.remove(smile) for smile in partial if len(smile)>2 and smile[1] not in ['-', '~'] ]
+    
+#     for smile in partial:
+#         if len(smile) > 2 and smile[1] not in ['-', '~']: partial.remove(smile)
+
+    return len(partial)
