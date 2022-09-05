@@ -24,3 +24,7 @@ def count_smileys(arr:list):
 #         if len(smile) > 2 and smile[1] not in ['-', '~']: partial.remove(smile)
 
     return len(partial)
+
+from re import findall
+def count_smileys_better(arr):
+    return len(list(findall(r"[:;][-~]?[)D]", " ".join(arr))))
