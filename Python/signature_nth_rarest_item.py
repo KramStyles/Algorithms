@@ -9,19 +9,32 @@ For example in ([5,4,5,4,5,4,4,5,3,3,3,2,2,1,5]), if 2 is supplied as n, the ans
 
 def nth_most_rate(array: list, n: int):
     """
+    This function goes through the list and finds the nth rarest item (n).
+    This would be implemented with the builtin collections.Counter method in python
+    params
+    array: (list) => List of integers
+    n: (int) => Nth rare item
+    return result: (int) Nth rarest item from the array
+    """
+
+    from collections import Counter
+    items = Counter(array)
+
+    return items[n]
+
+
+def nth_most_rate2():
+    """
     This function goes through the list and finds the nth rarest item (n)
     params
     array: (list) => List of integers
     n: (int) => Nth rare item
     return result: (int) Nth rarest item from the array
     """
-    from collections import Counter
-    items = Counter(array)
-
-    print(items[2])
+    pass
 
 
 array = [5, 4, 5, 4, 5, 4, 4, 5, 3, 3, 3, 2, 2, 1, 5]
 n = 2
 
-nth_most_rate(array, n)
+nth_most_rate(array, 7)
