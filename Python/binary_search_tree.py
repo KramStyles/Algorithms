@@ -5,25 +5,25 @@ class NewNode:
         self.right = None
 
 
-def search(root, key):
-    while root is not None:
-        if key > root.data:
-            root = root.right
-        elif key < root.data:
-            root = root.left
+def search(node_root, key):
+    while node_root is not None:
+        if key > node_root.data:
+            node_root = node_root.right
+        elif key < node_root.data:
+            node_root = node_root.left
         else:
             return True
     return False
 
 
-def insert(Node, data):
-    if not Node:
+def insert(node, data):
+    if not node:
         return NewNode(data)
-    if data < Node.data:
-        Node.left = insert(Node.left, data)
-    elif data > Node.data:
-        Node.right = insert(Node.right, data)
-    return Node
+    if data < node.data:
+        node.left = insert(node.left, data)
+    elif data > node.data:
+        node.right = insert(node.right, data)
+    return node
 
 
 if __name__ == '__main__':
