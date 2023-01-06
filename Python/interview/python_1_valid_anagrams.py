@@ -12,6 +12,7 @@ def solution(string1, string2):
     """
     return sorted(string1) == sorted(string2)
 
-print(solution('danger', 'garden'))
-print(solution('hello', 'ellhho'))
-print(solution('nameless', 'salesmen'))
+
+print(solution("danger", "garden"))
+print(solution("hello", "ellhho"))
+print(solution("nameless", "salesmen"))

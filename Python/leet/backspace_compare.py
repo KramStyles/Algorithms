@@ -2,14 +2,14 @@ def backspaceCompare(s: str, t: str) -> bool:
     arr1 = []
     arr2 = []
     for alp in s:
-        if arr1 and alp == '#':
+        if arr1 and alp == "#":
             arr1.pop()
-        elif alp != '#':
+        elif alp != "#":
             arr1.append(alp)
     for alp in t:
-        if arr2 and alp == '#':
+        if arr2 and alp == "#":
             arr2.pop()
-        elif alp != '#':
+        elif alp != "#":
             arr2.append(alp)
 
     return arr1 == arr2

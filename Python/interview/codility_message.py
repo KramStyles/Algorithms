@@ -6,7 +6,7 @@
 #     if len(new_msg) > K: return ""
 
 #     for idx in range(1, len(msg)):
-        
+
 #         joined = f"{new_msg} {msg[idx]}"
 #         length = len(joined)
 #         if len(joined) <= K:
@@ -23,7 +23,7 @@
 
 # solution(txt, 12)
 
-# p1 = [1, 4, 1] 
+# p1 = [1, 4, 1]
 # s1 = [1, 5, 1]
 
 # p2 = [4, 4, 2, 4]
@@ -42,7 +42,6 @@
 #         seat += 1
 
 #     print(seat)
-
 
 
 # solution2(p3, s3)
@@ -84,7 +83,7 @@
 
 
 def numberOfCarryOperations(num1, num2):
-    if num1==0 or num2==0:
+    if num1 == 0 or num2 == 0:
         return 0
     result = 0
     holding = [0]
@@ -100,7 +99,8 @@ def numberOfCarryOperations(num1, num2):
         if int(nums[0][i]) + int(nums[1][i]) + holding[-1] >= 10:
             result += 1
             holding.append(1)
-            
+
     return result
+
 
 print(numberOfCarryOperations(1, 999999))

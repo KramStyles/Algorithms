@@ -16,10 +16,16 @@ cakes({apples: 3, flour: 300, sugar: 150, milk: 100, oil: 100}, {sugar: 500, flo
 import enum
 
 
-bunch = [{'flour': 500, 'sugar': 200, 'eggs': 1}, {'flour': 1200, 'sugar': 1200, 'eggs': 5, 'milk': 200}]
-bunch2 = [{'apples': 3, 'flour': 300, 'sugar': 150, 'milk': 100, 'oil': 100}, {'sugar': 500, 'flour': 2000, 'milk': 2000}]
+bunch = [
+    {"flour": 500, "sugar": 200, "eggs": 1},
+    {"flour": 1200, "sugar": 1200, "eggs": 5, "milk": 200},
+]
+bunch2 = [
+    {"apples": 3, "flour": 300, "sugar": 150, "milk": 100, "oil": 100},
+    {"sugar": 500, "flour": 2000, "milk": 2000},
+]
 cakes = 0
-        
+
 recipe = bunch[0]
 ingr = bunch[1]
 
@@ -29,13 +35,15 @@ ingr = bunch2[1]
 maximum = []
 for a in recipe:
     if a not in ingr or recipe[a] > ingr[a]:
-        print('No')
+        print("No")
     else:
         maximum.append(ingr[a] // recipe[a])
 print(min(maximum))
 
 # maxi = [ingr[a] // recipe[a] for a in recipe if a in ingr and recipe[a] < ingr[a]]
-maxi = [ingr[a] // recipe[a] if a in ingr and recipe[a] < ingr[a] else 0 for a in recipe]
+maxi = [
+    ingr[a] // recipe[a] if a in ingr and recipe[a] < ingr[a] else 0 for a in recipe
+]
 # maxi = [a if a not in ingr for a in recipe]
 
 print(0 if False in maxi else min(maxi))

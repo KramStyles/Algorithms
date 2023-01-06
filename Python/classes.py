@@ -3,7 +3,7 @@ class myset(set):
         self.values = set(values)
 
     def double_add(self, value):
-        return self.values.add(value*2)
+        return self.values.add(value * 2)
 
 
 numbs = myset(4, 5, 4, 3, 2, 8)

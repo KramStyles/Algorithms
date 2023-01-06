@@ -27,7 +27,7 @@ class Atm:
             next = next.next_value  # 2 8 4, 8 4,
             current.next_value = previous  # None, 12
             previous = current  # 12,
-            current = next # 2 8 4
+            current = next  # 2 8 4
 
 
 atm = Atm()
@@ -42,4 +42,4 @@ atm.put_person_behind(1)
 atm.reverse()
 atm.put_person_behind(1)
 
-print('hello')
+print("hello")

@@ -37,10 +37,10 @@ def solution(dna):
     "" 	""
     """
     records = {
-        "A" :"T",
-        "T" :"A",
-        "C" :"G",
-        "G" :"C", 
+        "A": "T",
+        "T": "A",
+        "C": "G",
+        "G": "C",
     }
-    result = ''.join([records[char] for char in dna])
+    result = "".join([records[char] for char in dna])
     return print(result)

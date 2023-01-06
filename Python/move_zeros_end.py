@@ -1,8 +1,8 @@
 def move_zeros(array):
     """
-    Write an algorithm that takes an array 
-    and moves all of the zeros to the end, 
-    preserving the order of the other elements. 
+    Write an algorithm that takes an array
+    and moves all of the zeros to the end,
+    preserving the order of the other elements.
     Took me from 191 to 244. Kata 5
 
     First algorithm i wrote and it passed all test at once. Wonderful
@@ -20,6 +20,7 @@ def move_zeros(array):
 
 
 def move_zeros_shor(array):
-    return [x for x in array if x] + [0]*array.count(0)
+    return [x for x in array if x] + [0] * array.count(0)
+
 
 move_zeros([1, 0, 1, 2, 0, 1, 3])

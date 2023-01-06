@@ -1,5 +1,6 @@
 from random import randint
 
+
 def check(N):
     """
     A binary gap within a positive integer N is any maximal sequence of consecutive zeros that is surrounded by ones at both ends in the binary representation of N.
@@ -23,15 +24,21 @@ def check(N):
     if N % 10 == 0 and N != 20:
         return 0
     N = bin(N)[2:]
-    N = N.replace('1', '11')[1:].split('1') # Added extra 1s to 1 so i can get the 1 as empty strings when split
+    N = N.replace("1", "11")[1:].split(
+        "1"
+    )  # Added extra 1s to 1 so i can get the 1 as empty strings when split
     print(N)
-    if N.count('') == 1:
+    if N.count("") == 1:
         return 0
-    if N[0] == '' and N[-1] == '':
+    if N[0] == "" and N[-1] == "":
         return len(max(N))
     else:
         # Checks if the zero is bounded by 1 and then finds the top bounded zero and returns it
-        N = [N[x] for x in range(len(N)) if x != 0 and x < len(N) - 1 and (N[x - 1] == '' and N[x + 1] == '')]
+        N = [
+            N[x]
+            for x in range(len(N))
+            if x != 0 and x < len(N) - 1 and (N[x - 1] == "" and N[x + 1] == "")
+        ]
         if N:
             return len(max(N))
         else:
@@ -39,13 +46,13 @@ def check(N):
     return 0
 
 
-print("Ans is", check(randint(0, 2000)), '\n')
-print("Ans is", check(randint(0, 2000)), '\n')
-print("Ans is", check(randint(0, 2000)), '\n')
-print("Ans is", check(randint(0, 2000)), '\n')
-print("Ans is", check(randint(0, 2000)), '\n')
-print("Ans is", check(randint(0, 2000)), '\n')
-print("Ans is", check(randint(0, 2000)), '\n')
-print("Ans is", check(randint(0, 2000)), '\n')
-print("Ans is", check(randint(0, 2000)), '\n')
-print("Ans is", check(randint(0, 2000)), '\n')
+print("Ans is", check(randint(0, 2000)), "\n")
+print("Ans is", check(randint(0, 2000)), "\n")
+print("Ans is", check(randint(0, 2000)), "\n")
+print("Ans is", check(randint(0, 2000)), "\n")
+print("Ans is", check(randint(0, 2000)), "\n")
+print("Ans is", check(randint(0, 2000)), "\n")
+print("Ans is", check(randint(0, 2000)), "\n")
+print("Ans is", check(randint(0, 2000)), "\n")
+print("Ans is", check(randint(0, 2000)), "\n")
+print("Ans is", check(randint(0, 2000)), "\n")

@@ -1,13 +1,14 @@
 from turtle import position
 
 
-def searchinsortedmatrix(matrix,target):
+def searchinsortedmatrix(matrix, target):
     for idx, item in enumerate(matrix):
         for idx2, value in enumerate(item):
             if value == target:
-                print(value,idx, idx2)
+                print(value, idx, idx2)
                 return [idx, idx2]
     return [-1, -1]
+
 
 # mat = [
 #   [1, 4, 7, 12, 15, 1000],
@@ -19,6 +20,7 @@ def searchinsortedmatrix(matrix,target):
 
 # searchinsortedmatrix(mat, 45)
 
+
 def longest_substring_without_duplication(string):
     holder = []
     general = []
@@ -27,13 +29,15 @@ def longest_substring_without_duplication(string):
         for chars in string:
             if chars not in holder:
                 holder.append(chars)
-            else: break
-        general.append(''.join(holder))
+            else:
+                break
+        general.append("".join(holder))
         holder = []
         string = string[1:]
-    
+
     print(max(general, key=len))
     return max(general, key=len)
+
 
 # string1 = 'clementisacap'
 # string2 = 'decadevsindecagonarelit'
@@ -43,10 +47,12 @@ def longest_substring_without_duplication(string):
 # longest_substring_without_duplication(string2)
 # longest_substring_without_duplication(string3)
 
+
 class LinkedList:
     def __init__(self, value):
         self.value = value
         self.next = None
+
 
 class LinkedPerson:
     def __init__(self) -> None:
@@ -80,10 +86,9 @@ class LinkedPerson:
 
 
 def removeKthNodeFromEnd(node, k):
-    
-    
 
     pass
+
 
 node = LinkedPerson()
 node.put_front(9)

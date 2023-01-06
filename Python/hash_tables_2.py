@@ -15,8 +15,7 @@ class HashTable:
         return self.memory[key]
 
 
-
 ht = HashTable(10)
-ht.add('name', 'michael')
-ht.get('nae')
+ht.add("name", "michael")
+ht.get("nae")
 ht.memory

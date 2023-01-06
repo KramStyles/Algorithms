@@ -1,7 +1,7 @@
-class Solution:    
+class Solution:
     def rob(self, nums: list[int]) -> int:
         """
-        You are a professional robber planning to rob houses along a street. Each house has a certain 
+        You are a professional robber planning to rob houses along a street. Each house has a certain
         amount of money stashed, the only constraint stopping you from robbing each of them is that
         adjacent houses have security systems connected and it will automatically contact the police
         if two adjacent houses were broken into on the same night.
@@ -29,22 +29,21 @@ class Solution:
         #     total[1] += nums[item]
         # return print(max(total))
 
-        prev , nxt = 0, 0
+        prev, nxt = 0, 0
         for num in nums:
             temp = max(num + prev, nxt)
             prev = nxt
             nxt = temp
-        
+
         return nxt
 
 
 soln = Solution()
 nums = [1, 2]
-nums1 = [1,2,3,1] # 4
-nums2 = [2,7,9,3,1] # 12
-nums2 = [2,1,1,2] # 4
+nums1 = [1, 2, 3, 1]  # 4
+nums2 = [2, 7, 9, 3, 1]  # 12
+nums2 = [2, 1, 1, 2]  # 4
 
 soln.rob(nums1)
 soln.rob(nums2)
 soln.rob(nums)
-

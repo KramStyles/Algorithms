@@ -1,5 +1,6 @@
 from collections import deque
 
+
 class Stack:
     def __init__(self) -> None:
         self.stack = deque()
@@ -8,9 +9,10 @@ class Stack:
         self.stack.append(val)
 
     def pop(self):
-        if not self.is_empty: return self.stack.pop()
-        else: return print('Cannot remove from an empty Stack')
-
+        if not self.is_empty:
+            return self.stack.pop()
+        else:
+            return print("Cannot remove from an empty Stack")
 
     def peek(self):
         return self.stack[-1]
@@ -22,20 +24,25 @@ class Stack:
     def size(self):
         return len(self.stack)
 
+
 s = Stack()
-s.push('Mental')
-s.push('Dental')
+s.push("Mental")
+s.push("Dental")
 s.pop()
+
 
 def reverse_string(word):
     t = Stack()
-    for char in word: t.push(char)
-    ans = ''
+    for char in word:
+        t.push(char)
+    ans = ""
     while t.stack:
         ans += t.pop()
     return ans
 
-reverse_string('we will conquer')
+
+reverse_string("we will conquer")
+
 
 class Queue:
     def __init__(self) -> None:

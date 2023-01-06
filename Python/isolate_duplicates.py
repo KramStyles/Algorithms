@@ -1,6 +1,7 @@
 test = "aaaabbcdefffffffg"
 # ["aa[aa]bbcdeff[fffff]g", 2]
 
+
 def isolate(duplicates):
     words = []
     initial = []
@@ -28,4 +29,8 @@ def isolate(duplicates):
     return [hold, counter]
 
 
-print(isolate("aaasssssssddddffgkkkkkuueyyryrhhsgfhjjsnnnnnnjjfmgjghjdjjjjdhyteghsjckjdheyebnfjhhgnjdfyfggbejjwtyjfjcbdgdhdjfjeeebddhdychdjdjmkj"))
+print(
+    isolate(
+        "aaasssssssddddffgkkkkkuueyyryrhhsgfhjjsnnnnnnjjfmgjghjdjjjjdhyteghsjckjdheyebnfjhhgnjdfyfggbejjwtyjfjcbdgdhdjfjeeebddhdychdjdjmkj"
+    )
+)

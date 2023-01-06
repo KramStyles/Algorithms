@@ -30,9 +30,9 @@ class LinkedPersons:
             self.place_person_at_back(person)
 
     def list_persons(self):
-        persons = ''
+        persons = ""
         if not self.front:
-            return print('No one is in the queue')
+            return print("No one is in the queue")
         else:
             current_person = self.front
             while current_person:
@@ -88,17 +88,17 @@ class LinkedPersons:
                 counter += 1
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     queue = LinkedPersons()
 
     queue.list_persons()
-    queue.place_person_at_back('Ola')
-    queue.place_person_in_front('Jeremiah')
-    queue.place_person_in_front('Michelle')
-    queue.place_person_at_back('Donald')
+    queue.place_person_at_back("Ola")
+    queue.place_person_in_front("Jeremiah")
+    queue.place_person_in_front("Michelle")
+    queue.place_person_at_back("Donald")
 
     queue.list_persons()
-    queue.place_people_at_back(['Folu', 'Ebubue', 'Daniel', 'Okro'])
+    queue.place_people_at_back(["Folu", "Ebubue", "Daniel", "Okro"])
 
     queue.list_persons()
     # queue.reverse_people()

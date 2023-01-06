@@ -1,11 +1,11 @@
 def order(sentence):
     """
-        Your task is to sort a given string. Each word in the string will contain a single number. 
+        Your task is to sort a given string. Each word in the string will contain a single number.
         This number is the position the word should have in the result.
 
         Note: Numbers can be from 1 to 9. So 1 will be the first word (not 0).
 
-        If the input string is empty, return an empty string. The words in the 
+        If the input string is empty, return an empty string. The words in the
         input String will only contain valid consecutive numbers.
 
     Examples
@@ -13,8 +13,8 @@ def order(sentence):
     "4of Fo1r pe6ople g3ood th5e the2"  -->  "Fo1r the2 g3ood 4of th5e pe6ople"
     ""  -->  ""
     """
-    
-    new_sentence = sentence.split(' ')
+
+    new_sentence = sentence.split(" ")
     new_word = [None for item in new_sentence]
 
     rep = []
@@ -25,6 +25,7 @@ def order(sentence):
             new_word.append()
             count += 1
     return sentence
+
 
 sentence = "is2 Thi1s T4est 3a"
 print(order(sentence))

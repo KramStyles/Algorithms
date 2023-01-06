@@ -4,10 +4,11 @@ class Node:
         self.next = nxt
         # This is created because a node is like a box that contains data and position to the next data
 
+
 class LinkedList:
     def __init__(self) -> None:
         # Head variable that points to the head of the list
-        self.head = None 
+        self.head = None
 
     def insert_in_front(self, data):
         node = Node(data, self.head)
@@ -16,7 +17,7 @@ class LinkedList:
     def insert_at_end(self, data):
         if self.head is None:
             self.head = Node(data, None)
-            return  
+            return
 
         itr = self.head
         while itr:
@@ -28,19 +29,19 @@ class LinkedList:
         for data in array:
             self.insert_at_end(data)
 
-
-
     @property
     def print_link(self):
-        if not self.head: return print('My linked list is empty')
-        else: 
+        if not self.head:
+            return print("My linked list is empty")
+        else:
             itr = self.head
-            arrow = ' --> '
-            link = ''
+            arrow = " --> "
+            link = ""
             while itr:
-                link += f'{itr.data}{arrow}'
+                link += f"{itr.data}{arrow}"
                 itr = itr.next
             print(link[:-5])
+
 
 if __name__ == "__main__":
     link = LinkedList()
@@ -48,7 +49,7 @@ if __name__ == "__main__":
     # link.insert_in_front(69)
     link.insert_in_front(48)
 
-    link.insert_at_end(5) 
+    link.insert_at_end(5)
     # link.insert_values([22, 12, 33, 43])
 
     link.print_link

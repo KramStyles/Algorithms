@@ -1,12 +1,11 @@
 def log_search(search2, item):
 
-    
     search_copy = search2[:]
-    len_search = (len(search2))//2
+    len_search = (len(search2)) // 2
     counter = 0
     while len_search > 1:
         counter += 1
-        len_search = (len(search2))//2
+        len_search = (len(search2)) // 2
         first = search2[:len_search]
         last = search2[len_search:]
         if item < search2[len_search]:

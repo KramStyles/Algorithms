@@ -3,13 +3,13 @@ from variables import large_two_sums
 
 def solution(numbers: list, target: int) -> list:
     """
-    Given a 1-indexed array of integers numbers that is already sorted in non-decreasing order, 
-    find two numbers such that they add up to a specific target number. 
+    Given a 1-indexed array of integers numbers that is already sorted in non-decreasing order,
+    find two numbers such that they add up to a specific target number.
     Let these two numbers be numbers[index1] and numbers[index2] where 1 <= index1 < index2 <= numbers.length.
 
     Return the indices of the two numbers, index1 and index2, added by one as an integer array [index1, index2] of length 2.
 
-    The tests are generated such that there is exactly one solution. 
+    The tests are generated such that there is exactly one solution.
     You may not use the same element twice.
         p=len(numbers)-1
         for i, n in enumerate(numbers):
@@ -18,7 +18,7 @@ def solution(numbers: list, target: int) -> list:
         if numbers[p2]==target-n:
         return [i+1,p+1]
 
-    Your solution must use only constant extra space.   
+    Your solution must use only constant extra space.
     """
 
     # This solution works perfectly but it's time complexity can rule you out!

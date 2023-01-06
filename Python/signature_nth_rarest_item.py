@@ -18,6 +18,7 @@ def nth_most_rate(array: list, n: int):
     """
 
     from collections import Counter
+
     items = Counter(array)
     # items would contain each item in the list and the number of times they've occured saved in a dictionary
     # e.g {5: 5, 4: 4, 3: 3, 2: 2, 1: 1}

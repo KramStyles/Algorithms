@@ -1,7 +1,7 @@
 def solution(num):
     """
-    Note: For a perfect power, there might be several pairs. For example 81 = 3^4 = 9^2, so (3,4) 
-    and (9,2) are valid solutions. However, the tests take care of this, 
+    Note: For a perfect power, there might be several pairs. For example 81 = 3^4 = 9^2, so (3,4)
+    and (9,2) are valid solutions. However, the tests take care of this,
     so if a number is a perfect power, return any pair that proves it.
 
     Examples
@@ -19,7 +19,7 @@ def solution(num):
                 ans = 0
                 counter = 1
                 while ans < num:
-                    ans = dig ** counter
+                    ans = dig**counter
                     if ans == num:
                         return [dig, counter]
                     else:
@@ -45,7 +45,6 @@ def solution(num):
     # return None
 
     # if (num)**(0.5) == int((num)**(0.5)):
-
 
 
 # solution(81)

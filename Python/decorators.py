@@ -2,17 +2,19 @@ def upper_dec(function):
     def wrapper():
         func = function()
         return func.upper()
+
     return wrapper()
+
 
 def simple_str():
     return "i am a programmer"
 
 
-
 # We can have more than one decorator acting on a function
 def str_breaker(function):
     def wrapper():
-        return function.split(' ')
+        return function.split(" ")
+
     return wrapper()
 
 
@@ -30,7 +32,9 @@ def upper_dec_arg(function):
     def wrapper(arg1, arg2):
         func = function(arg1, arg2)
         return f"{func} {arg1} {arg2}".upper()
+
     return wrapper
+
 
 @upper_dec_arg
 def simple_str(surname, name):
@@ -60,7 +64,7 @@ def simple_str(surname, name):
 #         return wrapper
 
 #     def enter_exit_info(func):
-        
+
 #         def wrapper(self, *arg, **kw):
 #             print '-- entering', func.__name__
 #             print '-- ', self.__dict__
@@ -69,4 +73,3 @@ def simple_str(surname, name):
 #             print '-- ', self.__dict__
 #             return res
 #         return wrapper
-

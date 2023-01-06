@@ -8,23 +8,23 @@ class Matrix:
 
     def initialise_matrix(self, size):
         """
-            Generates an n x n matrix based on the `size` passed in as parameter.
-            For example: if size = 3, then a 3 by 3 matrix would be generated.
+        Generates an n x n matrix based on the `size` passed in as parameter.
+        For example: if size = 3, then a 3 by 3 matrix would be generated.
         """
-        for row in range(0,size):
+        for row in range(0, size):
             self.matrix.append([])
-            for col in range(0,size):
-                value = randint(0,99)
+            for col in range(0, size):
+                value = randint(0, 99)
                 self.matrix[row].append(value)
         return self.matrix
-    
+
     def display_matrix(self):
         """
-            Displays the square matrix as a 2D grid.
+        Displays the square matrix as a 2D grid.
         """
         length = len(self.matrix)
         for row in range(0, length):
-            st = "| " 
+            st = "| "
             for col in range(0, length):
                 if self.matrix[row][col] < 10:
                     st = st + str(self.matrix[row][col]) + "  | "
@@ -39,14 +39,11 @@ class Matrix:
             back = (len(self.matrix) - index) - 1
             ans2.append(mat[back])
             ans.append(mat[index])
-        return ("The diagnonal difference is ", abs(sum(ans2) - sum(ans)) ) 
-
+        return ("The diagnonal difference is ", abs(sum(ans2) - sum(ans)))
 
     def calculate_corner_sum(self):
         ans = self.matrix
         return sum([ans[0][0], ans[0][-1], ans[-1][0], ans[-1][-1]])
-        
-
 
 
 matrix = Matrix()

@@ -14,7 +14,9 @@ class solution(int):
 
     add(1) # 1
     """
+
     def __call__(self, n):
-        return solution(self+n)
+        return solution(self + n)
+
 
 print(solution(1)(2)(3))

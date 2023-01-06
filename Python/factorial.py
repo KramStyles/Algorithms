@@ -3,15 +3,17 @@ def normalFac(number):
     while number > 0:
         ans *= number
         number -= 1
-    return (ans)
+    return ans
+
 
 def recursiveFactorial(number):
     if number > 0:
-        ans =  (number + recursiveFactorial(number - 1))
+        ans = number + recursiveFactorial(number - 1)
         print(ans)
     else:
         return False
     return ans
+
 
 def theirRecursive(number):
     if number <= 0:

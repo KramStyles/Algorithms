@@ -13,19 +13,21 @@ def top_3_words(text):
     from collections import Counter
     from string import punctuation
     import re
-    
+
     # Splits it to remove most extra chars
     words = [word.lower() for word in text.split()]
-    
+
     # Checks and removes any symbols inside individual words apart from "'"
-    words = [word if "'" in word else re.sub(r'[^a-zA-z0-9 ]', '', word) for word in words]
-    
+    words = [
+        word if "'" in word else re.sub(r"[^a-zA-z0-9 ]", "", word) for word in words
+    ]
+
     # Removes ever single quote apart from the ones inside a word
-    words = [word for word in words if not re.match(f'^[{punctuation}]+$', word)] 
-    
+    words = [word for word in words if not re.match(f"^[{punctuation}]+$", word)]
+
     # Removes any empty value
     words = [word for word in words if word]
-    
+
     counts = Counter(words).most_common(3)
     print(words)
-    return [word[0] for word in counts ]
+    return [word[0] for word in counts]

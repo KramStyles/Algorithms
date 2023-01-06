@@ -7,9 +7,9 @@ def to_jaden_case(string):
         else:
             temp = x.split("'")
             temp[0] = temp[0].title()
-            String +="'".join(temp) + " "
+            String += "'".join(temp) + " "
     return String.strip()
-            
 
-def toJadenCase(string):        
+
+def toJadenCase(string):
     return " ".join(w.capitalize() for w in string.split())

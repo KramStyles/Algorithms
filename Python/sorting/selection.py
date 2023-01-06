@@ -1,7 +1,7 @@
 def solution(unsorted):
     """
-        selection sort involves getting the minimun number and pushing it to the end of the list. 
-        It can involve a new list
+    selection sort involves getting the minimun number and pushing it to the end of the list.
+    It can involve a new list
     """
     new_arr = []
     min_num = 0
@@ -15,10 +15,9 @@ def solution(unsorted):
                 changed = True
             elif changed == True and num1 < min_num:
                 min_num = unsorted[num]
-                
+
         new_arr.append(min_num)
         unsorted.remove(min_num)
-
 
 
 solution([4, 6, 2, 7, 8, 7])

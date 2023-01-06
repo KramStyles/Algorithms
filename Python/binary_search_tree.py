@@ -26,7 +26,7 @@ def insert(node, data):
     return node
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     root = Node(None)
     insert(root, 50)
     insert(root, 20)
@@ -36,6 +36,6 @@ if __name__ == '__main__':
     insert(root, 25)
 
     if search(root, 60):
-        print('60 is available')
+        print("60 is available")
     else:
-        print('60 is not available')
+        print("60 is not available")

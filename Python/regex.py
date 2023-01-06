@@ -1,7 +1,8 @@
 import re
+
 pattern = "[\w]"
 string = "3443"
 if re.search(pattern, string):
-    print('Valid')
+    print("Valid")
 else:
-    print('Invalid')
+    print("Invalid")

@@ -6,12 +6,12 @@ def fibonacci(n):
     return ans
 
 
-
 def recursiveFibonacci(n):
     if n > 0:
-        ans = n + recursiveFibonacci(n-1)
+        ans = n + recursiveFibonacci(n - 1)
     else:
         return False
     return ans
+
 
 print(recursiveFibonacci(5))

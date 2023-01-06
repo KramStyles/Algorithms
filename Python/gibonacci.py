@@ -7,11 +7,12 @@ def gibonacci(n, x, y):
         return first
     if number == 1:
         return second
-    
-    for i in range(2, number+1):
+
+    for i in range(2, number + 1):
         current = second - first
         first = second
         second = current
     return current
 
-print(gibonacci(3, 0, 1)) # should print 0
+
+print(gibonacci(3, 0, 1))  # should print 0

@@ -1,7 +1,7 @@
 import imp
 
 
-def solution(A:list):
+def solution(A: list):
     """
     A non-empty array A consisting of N integers is given. The array contains an odd number of elements, and each element of the array can be paired with another element that has the same value, except for one element that is left unpaired.
 
@@ -48,4 +48,5 @@ def solution(A:list):
         else:
             final.append(A[0])
 
-solution([9,7,9,7,3,3,2])
+
+solution([9, 7, 9, 7, 3, 3, 2])

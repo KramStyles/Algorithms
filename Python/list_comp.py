@@ -14,15 +14,18 @@ def shop_with_vat(priceLst):
     emp = []
     for x in prices:
         if x > 50:
-            emp.append(round((7.5/100)*x + x))
+            emp.append(round((7.5 / 100) * x + x))
         else:
             emp.append(x)
     return emp
 
+
 def shop_with_vat_comp(pricelist):
-    return [item_price if item_price < 50 else round((7.5/100) * item_price + item_price) for item_price in pricelist]
+    return [
+        item_price if item_price < 50 else round((7.5 / 100) * item_price + item_price)
+        for item_price in pricelist
+    ]
 
- 
 
-# print(shop_with_vat(prices)) 
+# print(shop_with_vat(prices))
 print(shop_with_vat_comp([120, 34, 5545, 223, 2233, 221, 484, 4, 829]))
