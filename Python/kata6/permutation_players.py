@@ -24,5 +24,5 @@ def solution(n, m, k) -> bool:
 
     return True
 
-# solution(4, 2, [[1,2,3,4], [4, 3, 1, 2]])
+solution(4, 2, [[1,2,3,4], [4, 3, 1, 2]])
 solution(4, 2, [[1,2,3,4], [1, 3, 2, 4]])
