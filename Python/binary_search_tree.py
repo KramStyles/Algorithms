@@ -1,4 +1,4 @@
-class NewNode:
+class Node:
     def __init__(self, data):
         self.data = data
         self.left = None
@@ -17,8 +17,8 @@ def search(node_root, key):
 
 
 def insert(node, data):
-    if not node:
-        return NewNode(data)
+    if not node.data:
+        node = Node(data)
     if data < node.data:
         node.left = insert(node.left, data)
     elif data > node.data:
@@ -27,7 +27,7 @@ def insert(node, data):
 
 
 if __name__ == '__main__':
-    root = None
+    root = Node(None)
     insert(root, 50)
     insert(root, 20)
     insert(root, 60)
