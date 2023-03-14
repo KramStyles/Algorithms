@@ -5,7 +5,8 @@ def boolean_to_string(b):
     Note: Only valid inputs will be given.
     """
 
-    return 'True' if b else 'False'
+    # return 'True' if b else 'False'
+    return str(b) # Simple function
 
 
 print(boolean_to_string(True))
