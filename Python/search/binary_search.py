@@ -8,7 +8,6 @@ def binary_search(lst, word):
     lst: List of iterable values
     word: Statement to search for in lst
     """
-    lst = sorted(lst)
     left, right = 0, len(lst) - 1
     while left <= right:
         mid = (left + right) // 2
