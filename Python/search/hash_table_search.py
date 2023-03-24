@@ -12,6 +12,8 @@ def hash_table(lst, word):
         if lst[i] not in hash_table:
             hash_table[lst[i]] = i
     if word in hash_table:
+        print(f"Found: {word} in Hash Table Search")
         return hash_table[word]
     else:
+        print(f"Couldn't Find: {word} in Hash Table Search")
         return -1  # If the value is not found in the list

@@ -11,5 +11,7 @@ def linear_search(lst, word):
     """
     for i in range(len(lst)):
         if lst[i] == word:
+            print(f"Found: {word} in Linear Search")
             return i
+    print(f"Couldn't Find: {word} in Linear Search")
     return -1  # If the value is not found in the list

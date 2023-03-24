@@ -12,9 +12,11 @@ def binary_search(lst, word):
     while left <= right:
         mid = (left + right) // 2
         if lst[mid] == word:
+            print(f"Found: {word} in Binary Search")
             return mid
         elif lst[mid] < word:
             left = mid + 1
         else:
             right = mid - 1
+    print(f"Couldn't Find: {word} in Binary Search")
     return -1  # If the value is not found in the list

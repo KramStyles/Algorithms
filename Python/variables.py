@@ -26078,5 +26078,3 @@ large_two_sums = [
     9,
     9,
 ]
-
-names = ['Kenneth Flores', 'Jacqueline Duarte', 'Anthony Miller', 'Jennifer Gould', 'Chase Robinson', 'Thomas Davis', 'Anthony Reed', 'Michelle Gonzalez', 'Christine Garrett', 'Larry Cook', 'Ruth Lester', 'Zachary Griffith', 'Kathleen Peterson', 'Stephanie Torres', 'Alyssa Wells', 'Leslie Davis', 'Carla Rose', 'Jessica West', 'Eric Wheeler', 'Steven Owens', 'Julia Nichols', 'Peter Ryan', 'Phyllis Ball', 'Joshua Chavez', 'Richard Cantu', 'Brittany Garner', 'Dennis Watson', 'Shannon Boyd', 'John Pearson', 'Matthew Simmons']
