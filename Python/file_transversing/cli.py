@@ -4,23 +4,18 @@ import logging
 from pathlib import Path
 
 logging.basicConfig(
-    filename="cleanup.log",
+    filename=str(Path(__file__).resolve().parent / "cleanup.log"),
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S"
 )
 
 
-def run():
-    # Set up parser and parser arguments.
-    parser = argparse.ArgumentParser(description="Clean up old files in the given directory.")
-    parser.add_argument("--directory", help="Target directory")
-    parser.add_argument("--days", type=int, default=30, help="Age threshold in days")
-
-    # Fetch inserted arguments
-    args = parser.parse_args()
-    directory = Path(args.directory).absolute()
-    cutoff_date = datetime.now() - timedelta(args.days)
+def run(directory=None, days=30):
+    if not directory:
+        raise ValueError("Directory wasn't provided")
+    directory = Path(directory).absolute()
+    cutoff_date = datetime.now() - timedelta(days=days)
 
     if not directory.exists() or not directory.is_dir():
         raise ValueError("Invalid directory path!")
@@ -35,10 +30,9 @@ def run():
             mod_time = file_path.stat().st_mtime
             mod_time = datetime.fromtimestamp(mod_time)
             # remove file if it's less than the expected date
-            print(file_path)
             if mod_time < cutoff_date:
                 print(f"File to remove: {file_path} (Last modified: {mod_time})")
-                file_path.unlink() # Remove the file
+                # file_path.unlink() # Remove the file
                 logging.warning(f"Deleted file: {file_path}")
 
     print(directory, cutoff_date)
@@ -46,4 +40,14 @@ def run():
 
 
 if __name__ == "__main__":
-    run()
+    try:
+        # Set up parser and parser arguments.
+        parser = argparse.ArgumentParser(description="Clean up old files in the given directory.")
+        parser.add_argument("--directory", help="Target directory")
+        parser.add_argument("--days", type=int, help="Age threshold in days")
+    
+        # Fetch inserted arguments
+        args = parser.parse_args()
+        run(args.directory, args.days)
+    except (TypeError, ValueError) as err:
+        logging.error(f"{err}")
