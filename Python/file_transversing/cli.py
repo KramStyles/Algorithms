@@ -32,7 +32,7 @@ def run(directory=None, days=30):
             # remove file if it's less than the expected date
             if mod_time < cutoff_date:
                 print(f"File to remove: {file_path} (Last modified: {mod_time})")
-                # file_path.unlink() # Remove the file
+                file_path.unlink() # Remove the file
                 logging.warning(f"Deleted file: {file_path}")
 
     print(directory, cutoff_date)
