@@ -5,3 +5,4 @@ env/
 hidden/
 *.txt
 __pycache__/
+.env
