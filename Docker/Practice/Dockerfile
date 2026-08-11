@@ -1,13 +1,11 @@
-FROM node:20
-
-RUN echo "Hello from Docker!!!"
-
-CMD [ "echo", "Hello from the dark side of the container"]
+FROM python:3.12-slim
 
 WORKDIR /app
 
-COPY requirements.txt .
+COPY . .
 
 RUN echo "Installing requirements..."
 
 RUN pip install -r requirements.txt
+
+CMD [ "python", "app.py" ]
