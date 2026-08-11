@@ -3,6 +3,6 @@ env/
 .idea/
 .vscode/
 hidden/
-*.txt
+file*.txt
 __pycache__/
 .env

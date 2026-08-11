@@ -1,0 +1,8 @@
+docker images - show all the images in the system
+docker ps - show list of running containers (use -a to find all containers)
+docker run -it ubuntu: (download and) run ubuntu in interactive mode
+docker build -t hello-docker .: try to build docker image with(out) a docker file on the curent directory (.) with a tag name (-t).
+
+docker-compose run web django-admin startproject django_project .
+docker-compose down -v: To remove previous image/containers
+docker-compose up --build: to update and run image (changes to requirements.txt)
